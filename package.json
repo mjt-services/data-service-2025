@@ -1,6 +1,6 @@
 {
   "name": "@mjt-services/data-service-2025",
-  "version": "2025.2.2-1133",
+  "version": "2025.2.2-1212",
   "sideEffects": false,
   "description": "data service",
   "main": "./dist/index.js",
