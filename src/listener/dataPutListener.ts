@@ -4,9 +4,9 @@ import { getDbStoreData } from "../data-store/getDbStoreData";
 import { idbValidKeyToString } from "../data-store/idbValidKeyToString";
 import { writeDbStoreData } from "../data-store/writeDbStoreData";
 
-
 export const dataPutListener: ConnectionListener<
-  DataConnectionMap, "data.add"
+  DataConnectionMap,
+  "data.put"
 > = async (props) => {
   const { dbStore, key, value } = props.detail.body;
   const dataMap = await getDbStoreData(dbStore);

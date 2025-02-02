@@ -4,7 +4,6 @@ import type { Env } from "./Env";
 import { assertValue } from "@mjt-engine/assert";
 import type { DataConnectionMap } from "@mjt-services/data-common-2025";
 import { getEnv } from "./getEnv";
-import { dataAddListener } from "./listener/dataAddListener";
 import { dataGetListener } from "./listener/dataGetListener";
 import { dataListListener } from "./listener/dataListListener";
 import { dataPutListener } from "./listener/dataPutListener";
@@ -17,7 +16,6 @@ export const initConnection = async () => {
 
   await Messages.createConnection<DataConnectionMap, Env>({
     subscribers: {
-      "data.add": dataAddListener,
       "data.get": dataGetListener,
       "data.list": dataListListener,
       "data.put": dataPutListener,

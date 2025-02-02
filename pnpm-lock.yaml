@@ -22,7 +22,7 @@ importers:
         version: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
       '@mjt-services/data-common-2025':
         specifier: github:mjt-services/data-common-2025
-        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/688c48d3685bff49b873a0a1f0dcea5bd7cfc6e0
+        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/17d89dd248c8722e973e1fa7cedeca60f8c66668
     devDependencies:
       '@types/node':
         specifier: ^22.10.7
@@ -204,9 +204,9 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b}
     version: 2025.1.19-1221
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/688c48d3685bff49b873a0a1f0dcea5bd7cfc6e0':
-    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/688c48d3685bff49b873a0a1f0dcea5bd7cfc6e0}
-    version: 2025.2.2-1018
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/17d89dd248c8722e973e1fa7cedeca60f8c66668':
+    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/17d89dd248c8722e973e1fa7cedeca60f8c66668}
+    version: 2025.2.2-1210
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     resolution: {integrity: sha512-QZHtlVgbAdy2zAqNA9Gu1UpIuI8Xvsd1v8ic6B2pZmeFnFcMWiPLfWXh7TVw4eGEZ/C9TH281KwhVoeQUKbyjw==}
@@ -540,7 +540,7 @@ snapshots:
       '@sinclair/typebox': 0.33.22
       json-stable-stringify: 1.2.1
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/688c48d3685bff49b873a0a1f0dcea5bd7cfc6e0': {}
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/17d89dd248c8722e973e1fa7cedeca60f8c66668': {}
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     optional: true
