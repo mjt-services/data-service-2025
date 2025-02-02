@@ -5,6 +5,7 @@ certs
 sync
 dist
 .ssh
+data
 
 lib-cov
 *.seed
