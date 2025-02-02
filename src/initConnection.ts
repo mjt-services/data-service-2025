@@ -2,11 +2,13 @@ import { Messages } from "@mjt-engine/message";
 import type { Env } from "./Env";
 
 import { assertValue } from "@mjt-engine/assert";
+import type { DataConnectionMap } from "@mjt-services/data-common-2025";
 import { getEnv } from "./getEnv";
 import { dataAddListener } from "./listener/dataAddListener";
-import { tunnelRemoveListener } from "./tunnelRemoveListener";
-import { tunnelResolveListener } from "./tunnelResolveListener";
-import type { DataConnectionMap } from "@mjt-services/data-common-2025";
+import { dataGetListener } from "./listener/dataGetListener";
+import { dataListListener } from "./listener/dataListListener";
+import { dataPutListener } from "./listener/dataPutListener";
+import { dataRemoveListener } from "./listener/dataRemoveListener";
 
 export const initConnection = async () => {
   const env = getEnv();
@@ -16,8 +18,10 @@ export const initConnection = async () => {
   await Messages.createConnection<DataConnectionMap, Env>({
     subscribers: {
       "data.add": dataAddListener,
-      // "tunnel.remove": tunnelRemoveListener,
-      // "tunnel.resolve": tunnelResolveListener,
+      "data.get": dataGetListener,
+      "data.list": dataListListener,
+      "data.put": dataPutListener,
+      "data.remove": dataRemoveListener,
     },
     options: { log: console.log },
     server: [url],
