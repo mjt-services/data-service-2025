@@ -1,7 +1,4 @@
-import { undefined } from "./dataPutListener";
-
-
-export type ObjectWithIdField = { id: string; };
+export type ObjectWithIdField = { id: string };
 
 export const isObjectWithIdField = (
   maybe: unknown
