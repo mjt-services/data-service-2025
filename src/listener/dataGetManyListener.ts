@@ -1,13 +1,16 @@
 import type { ConnectionListener } from "@mjt-engine/message";
 import { isDefined } from "@mjt-engine/object";
-import type { DataConnectionMap } from "@mjt-services/data-common-2025";
-import { getObjectStoreData } from "../object-store/file/getObjectStoreData";
-
+import { Ids, type DataConnectionMap } from "@mjt-services/data-common-2025";
+import { getObjectStoresData } from "../object-store/file/getObjectStoresData";
 
 export const dataGetManyListener: ConnectionListener<
-  DataConnectionMap, "data.getMany"
+  DataConnectionMap,
+  "data.getMany"
 > = async (props) => {
   const { objectStore, keys } = props.detail.body;
-  const dataMap = await getObjectStoreData(objectStore);
+  const stores = [objectStore, ...keys.map((k) => Ids.toObjectStore(k))].filter(
+    isDefined
+  );
+  const dataMap = await getObjectStoresData(stores);
   return keys.map((key) => dataMap[key]).filter(isDefined);
 };
