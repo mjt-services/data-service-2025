@@ -1,17 +1,20 @@
 import type { ConnectionListener } from "@mjt-engine/message";
 import type { DataConnectionMap } from "@mjt-services/data-common-2025";
-import { getDbStoreData } from "../data-store/getDbStoreData";
-import { idbValidKeyToString } from "../data-store/idbValidKeyToString";
-import { writeDbStoreData } from "../data-store/writeDbStoreData";
+import { getObjectStoreData } from "../object-store/file/getObjectStoreData";
+import { writeObjectStoreData } from "../object-store/file/writeObjectStoreData";
+import { queryToKeys } from "../object-store/query/queryToKeys";
 
 export const dataRemoveListener: ConnectionListener<
   DataConnectionMap,
   "data.remove"
 > = async (props) => {
-  const { dbStore, query } = props.detail.body;
-  const dataMap = await getDbStoreData(dbStore);
-  const stringKey = await idbValidKeyToString(query);
-  delete dataMap[stringKey];
-  await writeDbStoreData(dbStore, dataMap);
+  const { objectStore, query } = props.detail.body;
+  const dataMap = await getObjectStoreData(objectStore);
+
+  const keys = await queryToKeys(query);
+  for (const key of keys) {
+    delete dataMap[key];
+  }
+  await writeObjectStoreData(objectStore, dataMap);
   return { success: true };
 };

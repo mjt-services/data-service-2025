@@ -28,12 +28,14 @@
     "@mjt-engine/byte": "github:mjt-engine/byte",
     "@mjt-engine/message": "github:mjt-engine/message",
     "@mjt-engine/object": "github:mjt-engine/object",
-    "@mjt-services/data-common-2025": "github:mjt-services/data-common-2025"
+    "@mjt-services/data-common-2025": "github:mjt-services/data-common-2025",
+    "jmespath": "^0.16.0"
   },
   "devDependencies": {
-    "@types/node": "^22.10.7",
+    "@types/jmespath": "^0.15.2",
+    "@types/node": "^22.13.4",
     "tsx": "^4.19.2",
-    "typedoc": "^0.27.6",
+    "typedoc": "^0.27.7",
     "typescript": "^5.7.3"
   }
 }

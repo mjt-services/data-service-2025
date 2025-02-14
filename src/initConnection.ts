@@ -5,9 +5,10 @@ import { assertValue } from "@mjt-engine/assert";
 import type { DataConnectionMap } from "@mjt-services/data-common-2025";
 import { getEnv } from "./getEnv";
 import { dataGetListener } from "./listener/dataGetListener";
-import { dataListListener } from "./listener/dataListListener";
+import { dataGetManyListener } from "./listener/dataGetManyListener";
 import { dataPutListener } from "./listener/dataPutListener";
 import { dataRemoveListener } from "./listener/dataRemoveListener";
+import { dataSearchListener } from "./listener/dataSearchListener";
 
 export const initConnection = async () => {
   const env = getEnv();
@@ -17,7 +18,8 @@ export const initConnection = async () => {
   await Messages.createConnection<DataConnectionMap, Env>({
     subscribers: {
       "data.get": dataGetListener,
-      "data.list": dataListListener,
+      "data.getMany": dataGetManyListener,
+      "data.search": dataSearchListener,
       "data.put": dataPutListener,
       "data.remove": dataRemoveListener,
     },
