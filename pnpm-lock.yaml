@@ -22,7 +22,7 @@ importers:
         version: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
       '@mjt-services/data-common-2025':
         specifier: github:mjt-services/data-common-2025
-        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/9f250c1a9d6123fd813b28e115cc2652f2ce532a
+        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/47c22247519be762a550f12464b55545c0606c0f
       jmespath:
         specifier: ^0.16.0
         version: 0.16.0
@@ -210,9 +210,9 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b}
     version: 2025.1.19-1221
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/9f250c1a9d6123fd813b28e115cc2652f2ce532a':
-    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/9f250c1a9d6123fd813b28e115cc2652f2ce532a}
-    version: 2025.2.14-1337
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/47c22247519be762a550f12464b55545c0606c0f':
+    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/47c22247519be762a550f12464b55545c0606c0f}
+    version: 2025.2.15-1326
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     resolution: {integrity: sha512-QZHtlVgbAdy2zAqNA9Gu1UpIuI8Xvsd1v8ic6B2pZmeFnFcMWiPLfWXh7TVw4eGEZ/C9TH281KwhVoeQUKbyjw==}
@@ -250,8 +250,8 @@ packages:
   '@shikijs/types@1.29.2':
     resolution: {integrity: sha512-VJjK0eIijTZf0QSTODEXCqinjBn0joAHQ+aPSBzrv4O2d/QSbsMw+ZeSRx03kV34Hy7NzUvV/7NqfYGRLrASmw==}
 
-  '@shikijs/vscode-textmate@10.0.1':
-    resolution: {integrity: sha512-fTIQwLF+Qhuws31iw7Ncl1R3HUDtGwIipiJ9iU+UsDUwMhegFcQKQHd51nZjb7CArq0MvON8rbgCGQYWHUKAdg==}
+  '@shikijs/vscode-textmate@10.0.2':
+    resolution: {integrity: sha512-83yeghZ2xxin3Nj8z1NMd/NCuca+gsYXswywDy5bHvwlWL8tpTQmzGeUuHd9FC3E/SBEMvzJRwWEOz5gGes9Qg==}
 
   '@sinclair/typebox@0.33.22':
     resolution: {integrity: sha512-auUj4k+f4pyrIVf4GW5UKquSZFHJWri06QgARy9C0t9ZTjJLIuNIrr1yl9bWcJWJ1Gz1vOvYN1D+QPaIlNMVkQ==}
@@ -533,7 +533,7 @@ snapshots:
     dependencies:
       '@shikijs/engine-oniguruma': 1.29.2
       '@shikijs/types': 1.29.2
-      '@shikijs/vscode-textmate': 10.0.1
+      '@shikijs/vscode-textmate': 10.0.2
 
   '@mjt-engine/assert@https://codeload.github.com/mjt-engine/assert/tar.gz/58b808f45ca8a23cd7d613e75ba9e76c5fb70e55': {}
 
@@ -553,7 +553,7 @@ snapshots:
       '@sinclair/typebox': 0.33.22
       json-stable-stringify: 1.2.1
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/9f250c1a9d6123fd813b28e115cc2652f2ce532a': {}
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/47c22247519be762a550f12464b55545c0606c0f': {}
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     optional: true
@@ -576,14 +576,14 @@ snapshots:
   '@shikijs/engine-oniguruma@1.29.2':
     dependencies:
       '@shikijs/types': 1.29.2
-      '@shikijs/vscode-textmate': 10.0.1
+      '@shikijs/vscode-textmate': 10.0.2
 
   '@shikijs/types@1.29.2':
     dependencies:
-      '@shikijs/vscode-textmate': 10.0.1
+      '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
 
-  '@shikijs/vscode-textmate@10.0.1': {}
+  '@shikijs/vscode-textmate@10.0.2': {}
 
   '@sinclair/typebox@0.33.22': {}
 
