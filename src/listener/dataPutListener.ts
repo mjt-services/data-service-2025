@@ -25,5 +25,5 @@ export const dataPutListener: ConnectionListener<
   const dataMap = await getObjectStoreData(realizedObjectStore);
   dataMap[realizedKey] = value;
   await writeObjectStoreData(realizedObjectStore, dataMap);
-  return key;
+  return realizedKey;
 };

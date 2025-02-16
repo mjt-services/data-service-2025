@@ -5,7 +5,6 @@ import { fromUnknownDataQueryToResults } from "./fromUnknownDataQueryToResults";
 import { objectStoresToData } from "./objectStoresToData";
 import { projectionToObjects } from "./projectionToObjects";
 
-
 export const fromObjectStoreDataQueryToResults = async (
   dataQuery: FromObjectStoreDataQuery
 ) => {
@@ -21,5 +20,3 @@ export const fromObjectStoreDataQueryToResults = async (
   }
   return transform;
 };
-
-
