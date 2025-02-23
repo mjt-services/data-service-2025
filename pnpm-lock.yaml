@@ -16,7 +16,7 @@ importers:
         version: https://codeload.github.com/mjt-engine/byte/tar.gz/472e6b25258a1d694808e214d3a41e07f7d8504f
       '@mjt-engine/message':
         specifier: github:mjt-engine/message
-        version: https://codeload.github.com/mjt-engine/message/tar.gz/34cd106e41b1b6294490356d52e9e151825c281c(nats.ws@1.30.1)
+        version: https://codeload.github.com/mjt-engine/message/tar.gz/5524564dc11971b7a79b0148a9239532b55036b5(nats.ws@1.30.1)
       '@mjt-engine/object':
         specifier: github:mjt-engine/object
         version: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
@@ -206,9 +206,9 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/byte/tar.gz/472e6b25258a1d694808e214d3a41e07f7d8504f}
     version: 2025.1.19-1221
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/34cd106e41b1b6294490356d52e9e151825c281c':
-    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/34cd106e41b1b6294490356d52e9e151825c281c}
-    version: 2025.2.23-1124
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/5524564dc11971b7a79b0148a9239532b55036b5':
+    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/5524564dc11971b7a79b0148a9239532b55036b5}
+    version: 2025.2.23-1253
     peerDependencies:
       nats.ws: ^1.27.0
 
@@ -551,7 +551,7 @@ snapshots:
       '@mjt-engine/assert': https://codeload.github.com/mjt-engine/assert/tar.gz/58b808f45ca8a23cd7d613e75ba9e76c5fb70e55
       msgpackr: 1.11.2
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/34cd106e41b1b6294490356d52e9e151825c281c(nats.ws@1.30.1)':
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/5524564dc11971b7a79b0148a9239532b55036b5(nats.ws@1.30.1)':
     dependencies:
       '@mjt-engine/byte': https://codeload.github.com/mjt-engine/byte/tar.gz/472e6b25258a1d694808e214d3a41e07f7d8504f
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
@@ -564,7 +564,7 @@ snapshots:
 
   '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/befc39e89cca76e2c46858b1dde8cd7bf07294eb(nats.ws@1.30.1)':
     dependencies:
-      '@mjt-engine/message': https://codeload.github.com/mjt-engine/message/tar.gz/34cd106e41b1b6294490356d52e9e151825c281c(nats.ws@1.30.1)
+      '@mjt-engine/message': https://codeload.github.com/mjt-engine/message/tar.gz/5524564dc11971b7a79b0148a9239532b55036b5(nats.ws@1.30.1)
     transitivePeerDependencies:
       - nats.ws
 
