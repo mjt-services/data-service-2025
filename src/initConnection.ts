@@ -15,7 +15,7 @@ export const initConnection = async () => {
   const url = assertValue(env.NATS_URL);
   console.log("NATS_URL", url);
 
-  await Messages.createConnection<DataConnectionMap, Env>({
+  const connection = await Messages.createConnection<DataConnectionMap, Env>({
     subscribers: {
       "data.get": dataGetListener,
       "data.getMany": dataGetManyListener,
@@ -29,4 +29,5 @@ export const initConnection = async () => {
     env,
   });
   console.log("initConnection: init complete");
+  return connection;
 };
