@@ -9,27 +9,24 @@ import {
 import { getConnection } from "../_connection";
 
 export const publishUpdateEvents = async (value: unknown) => {
-  if (!isChildObject(value)) {
-    return;
-  }
-  const { parentId } = value;
   const con = await getConnection();
-
-  // TODO  remove deprecated update event
-  con.publish<UpdateSubject, typeof DATA_EVENT_MAP>({
-    payload: undefined,
-    subject: `update.${parentId}`,
-  });
-  con.publish<ChildUpdateSubject, typeof DATA_EVENT_MAP>({
-    payload: undefined,
-    subject: `child_update.${parentId}`,
-  });
-  if (!isEntity(value)) {
-    return;
+  if (isEntity(value)) {
+    const { id } = value;
+    con.publish<ObjectUpdateSubject, typeof DATA_EVENT_MAP>({
+      payload: value,
+      subject: `object_update.${id}`,
+    });
   }
-  const { id } = value;
-  con.publish<ObjectUpdateSubject, typeof DATA_EVENT_MAP>({
-    payload: undefined,
-    subject: `object_update.${id}`,
-  });
+  if (isChildObject(value)) {
+    const { parentId } = value;
+    // TODO  remove deprecated update event
+    con.publish<UpdateSubject, typeof DATA_EVENT_MAP>({
+      payload: undefined,
+      subject: `update.${parentId}`,
+    });
+    con.publish<ChildUpdateSubject, typeof DATA_EVENT_MAP>({
+      payload: undefined,
+      subject: `child_update.${parentId}`,
+    });
+  }
 };

@@ -22,7 +22,7 @@ importers:
         version: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
       '@mjt-services/data-common-2025':
         specifier: github:mjt-services/data-common-2025
-        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/b3d00bb40635b08f5f4f5a120cbb54123f0a86c2(nats.ws@1.30.1)
+        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f09e3286c04111976d2df2f015a828ecbf302aeb(nats.ws@1.30.1)
       jmespath:
         specifier: ^0.16.0
         version: 0.16.0
@@ -216,9 +216,9 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b}
     version: 2025.1.19-1221
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/b3d00bb40635b08f5f4f5a120cbb54123f0a86c2':
-    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/b3d00bb40635b08f5f4f5a120cbb54123f0a86c2}
-    version: 2025.3.3-1335
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f09e3286c04111976d2df2f015a828ecbf302aeb':
+    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f09e3286c04111976d2df2f015a828ecbf302aeb}
+    version: 2025.3.3-1403
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     resolution: {integrity: sha512-QZHtlVgbAdy2zAqNA9Gu1UpIuI8Xvsd1v8ic6B2pZmeFnFcMWiPLfWXh7TVw4eGEZ/C9TH281KwhVoeQUKbyjw==}
@@ -562,7 +562,7 @@ snapshots:
       '@sinclair/typebox': 0.33.22
       json-stable-stringify: 1.2.1
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/b3d00bb40635b08f5f4f5a120cbb54123f0a86c2(nats.ws@1.30.1)':
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f09e3286c04111976d2df2f015a828ecbf302aeb(nats.ws@1.30.1)':
     dependencies:
       '@mjt-engine/message': https://codeload.github.com/mjt-engine/message/tar.gz/1611eb40575b4ffc1e7daf387336d4c1027cd034(nats.ws@1.30.1)
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/75263a186b55c31764efb3a1bc075285f971946b
