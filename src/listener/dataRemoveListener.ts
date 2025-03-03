@@ -5,7 +5,7 @@ import { getObjectStoreData } from "../object-store/file/getObjectStoreData";
 import { writeObjectStoreData } from "../object-store/file/writeObjectStoreData";
 import { queryToKeys } from "../object-store/query/queryToKeys";
 import { queryToObjectStores } from "../object-store/query/queryToObjectStores";
-import { publishUpdateEvent } from "../event/publishUpdateEvent";
+import { publishUpdateEvents } from "../event/publishUpdateEvents";
 
 export const dataRemoveListener: ConnectionListener<
   DataConnectionMap,
@@ -29,7 +29,7 @@ export const dataRemoveListener: ConnectionListener<
     await writeObjectStoreData(store, dataMap);
 
     for (const value of deletedValues) {
-      await publishUpdateEvent(value);
+      await publishUpdateEvents(value);
     }
   }
   return { success: true };

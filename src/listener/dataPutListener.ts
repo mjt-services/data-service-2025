@@ -4,7 +4,7 @@ import { Ids, type DataConnectionMap } from "@mjt-services/data-common-2025";
 import { getObjectStoreData } from "../object-store/file/getObjectStoreData";
 import { writeObjectStoreData } from "../object-store/file/writeObjectStoreData";
 import { extractIdFromObject } from "./ObjectWithIdField";
-import { publishUpdateEvent } from "../event/publishUpdateEvent";
+import { publishUpdateEvents } from "../event/publishUpdateEvents";
 
 export const dataPutListener: ConnectionListener<
   DataConnectionMap,
@@ -26,6 +26,6 @@ export const dataPutListener: ConnectionListener<
   const dataMap = await getObjectStoreData(realizedObjectStore);
   dataMap[realizedKey] = value;
   await writeObjectStoreData(realizedObjectStore, dataMap);
-  await publishUpdateEvent(value);
+  await publishUpdateEvents(value);
   return realizedKey;
 };
