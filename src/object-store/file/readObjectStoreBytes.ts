@@ -1,12 +1,11 @@
 import type { ObjectStore } from "@mjt-services/data-common-2025";
-import { objectStoreToFilePath } from "./objectStoreToFilePath";
 import * as fs from "fs/promises";
+import { objectStoreToFilePath } from "./objectStoreToFilePath";
 
 export const readObjectStoreBytes = async (objectStore: ObjectStore) => {
   try {
     const filePath = objectStoreToFilePath(objectStore);
-    const data = await fs.readFile(filePath);
-    return data;
+    return fs.readFile(filePath);
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") {
       return undefined;
