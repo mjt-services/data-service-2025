@@ -12,8 +12,7 @@ export const flushAllObjectStores = async () => {
     }
     const data = await dataMapPromise;
     const tempFilePath = `${filePath}.tmp`;
-    const swizzled = await Swizzles.swizzleAndStore(data);
-    const bytes = Bytes.toMsgPack(swizzled);
+    const bytes = Bytes.toMsgPack(data);
 
     await fs.writeFile(tempFilePath, bytes, { flag: "w" });
     await fs.rename(tempFilePath, filePath as string);
