@@ -5,6 +5,7 @@ import { getObjectStoreData } from "../object-store/file/getObjectStoreData";
 import { writeObjectStoreData } from "../object-store/file/writeObjectStoreData";
 import { extractIdFromObject } from "./ObjectWithIdField";
 import { publishUpdateEvents } from "../event/publishUpdateEvents";
+import { swizzleAndStore } from "../byte-store/Swizzles";
 
 export const dataPutListener: ConnectionListener<
   DataConnectionMap,
@@ -24,7 +25,8 @@ export const dataPutListener: ConnectionListener<
     );
   }
   const dataMap = await getObjectStoreData(realizedObjectStore);
-  dataMap[realizedKey] = value;
+  const swizzled = await swizzleAndStore(value);
+  dataMap[realizedKey] = swizzled;
   await writeObjectStoreData(realizedObjectStore, dataMap);
   await publishUpdateEvents(value);
   return realizedKey;

@@ -18,7 +18,7 @@
     "docker-build": "scripts/build.sh",
     "docker-run": "scripts/run.sh",
     "docker-push": "scripts/push.sh",
-    "dev": "pnpm run build && pnpm run docker-run"
+    "dev": "pnpm run build && pnpm run docker-run && docker logs -f data"
   },
   "keywords": [],
   "author": "Matt Taylor (https://mjt.dev)",
@@ -30,12 +30,12 @@
     "@mjt-engine/message": "github:mjt-engine/message",
     "@mjt-engine/object": "github:mjt-engine/object",
     "@mjt-services/data-common-2025": "github:mjt-services/data-common-2025",
-    "better-sqlite3": "^11.8.1",
+    "better-sqlite3": "^11.9.0",
     "jmespath": "^0.16.0"
   },
   "devDependencies": {
     "@types/jmespath": "^0.15.2",
-    "@types/node": "^22.13.9",
+    "@types/node": "^22.13.10",
     "tsx": "^4.19.3",
     "typedoc": "^0.27.9",
     "typescript": "^5.8.2"

@@ -2,6 +2,7 @@ import type { ConnectionListener } from "@mjt-engine/message";
 import { isDefined, isUndefined } from "@mjt-engine/object";
 import { Ids, type DataConnectionMap } from "@mjt-services/data-common-2025";
 import { getObjectStoreData } from "../object-store/file/getObjectStoreData";
+import { Swizzles } from "../byte-store/Swizzles";
 
 export const dataGetListener: ConnectionListener<
   DataConnectionMap,
@@ -19,5 +20,6 @@ export const dataGetListener: ConnectionListener<
   }
 
   const dataMap = await getObjectStoreData(realizedObjectStore);
-  return dataMap[key];
+  const unswizzled = await Swizzles.unswizzleFromStore(dataMap[key]);
+  return unswizzled;
 };
