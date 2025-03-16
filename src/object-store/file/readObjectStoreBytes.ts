@@ -5,7 +5,7 @@ import { objectStoreToFilePath } from "./objectStoreToFilePath";
 export const readObjectStoreBytes = async (objectStore: ObjectStore) => {
   try {
     const filePath = objectStoreToFilePath(objectStore);
-    return fs.readFile(filePath);
+    return await fs.readFile(filePath);
   } catch (error) {
     if ((error as NodeJS.ErrnoException).code === "ENOENT") {
       return undefined;

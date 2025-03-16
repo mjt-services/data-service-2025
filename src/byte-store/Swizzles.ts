@@ -14,6 +14,9 @@ export const swizzleAndStore = (value: unknown) => {
     value,
     matchType: (v) => v instanceof ArrayBuffer,
     replacement: async (value) => {
+      // if (value.byteLength === 32) {
+      //   return value;
+      // }
       const hash = await Bytes.hashOf({ bytes: value, algorithm: "SHA-256" });
       const baseDir = getBlobPath();
       await ByteStores.storeBlob({ baseDir, hash, data: value });

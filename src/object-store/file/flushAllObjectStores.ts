@@ -1,5 +1,6 @@
 import { Bytes } from "@mjt-engine/byte";
 import * as fs from "fs/promises";
+import { Swizzles } from "../../byte-store/Swizzles";
 import { DATA_MAP_CACHE, DIRTY_DATA_MAP_CACHE } from "./DATA_MAP_CACHE";
 
 export const flushAllObjectStores = async () => {
@@ -11,7 +12,8 @@ export const flushAllObjectStores = async () => {
     }
     const data = await dataMapPromise;
     const tempFilePath = `${filePath}.tmp`;
-    const bytes = Bytes.toMsgPack(data);
+    const swizzled = await Swizzles.swizzleAndStore(data);
+    const bytes = Bytes.toMsgPack(swizzled);
 
     await fs.writeFile(tempFilePath, bytes, { flag: "w" });
     await fs.rename(tempFilePath, filePath as string);
