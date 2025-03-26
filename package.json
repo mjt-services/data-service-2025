@@ -30,6 +30,7 @@
     "@mjt-engine/message": "github:mjt-engine/message",
     "@mjt-engine/object": "github:mjt-engine/object",
     "@mjt-services/data-common-2025": "github:mjt-services/data-common-2025",
+    "@qdrant/js-client-rest": "^1.13.0",
     "better-sqlite3": "^11.9.0",
     "jmespath": "^0.16.0"
   },
