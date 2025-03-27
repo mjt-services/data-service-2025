@@ -9,6 +9,10 @@ import { dataGetManyListener } from "./listener/dataGetManyListener";
 import { dataPutListener } from "./listener/dataPutListener";
 import { dataRemoveListener } from "./listener/dataRemoveListener";
 import { dataSearchListener } from "./listener/dataSearchListener";
+import {
+  vectorPutListener,
+} from "./listener/vectorPutListener";
+import { vectorSearchListener } from "./listener/vectorSearchListener";
 
 export const initConnection = async () => {
   const env = getEnv();
@@ -22,6 +26,8 @@ export const initConnection = async () => {
       "data.search": dataSearchListener,
       "data.put": dataPutListener,
       "data.remove": dataRemoveListener,
+      "vector.put": vectorPutListener,
+      "vector.search": vectorSearchListener,
     },
     options: { log: console.log },
     server: [url],
