@@ -1,0 +1,19 @@
+services:
+  data-service-2025:
+    image: ${IMAGE_TAG}
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    env_file:
+      - ./.env
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ${DATA_DIR}:/data
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    stdin_open: true
+    tty: true
