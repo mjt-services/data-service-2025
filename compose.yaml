@@ -5,6 +5,7 @@ services:
     restart: always
     env_file:
       - ./.env
+      - ./../.env
     build:
       context: .
       dockerfile: Dockerfile
