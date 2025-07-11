@@ -2,6 +2,7 @@
 
 
 ## 2025-07-11
+- bump deps ([7f2ecb1](https://github.com/mjt-services/data-service-2025/commit/7f2ecb1944d9155b3792f6509af260d0f0a9ffba)) by user
 - bump deps, handle room udpates more gracefully to stop potential endless responses from daimons ([d86d554](https://github.com/mjt-services/data-service-2025/commit/d86d5540ee6dc0d076f3ec96cd5906849aa08dc6)) by user
 
 ## 2025-06-03
