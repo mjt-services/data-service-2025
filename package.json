@@ -30,15 +30,15 @@
     "@mjt-engine/message": "github:mjt-engine/message",
     "@mjt-engine/object": "github:mjt-engine/object",
     "@mjt-services/data-common-2025": "github:mjt-services/data-common-2025",
-    "@qdrant/js-client-rest": "^1.13.0",
-    "better-sqlite3": "^11.9.1",
+    "@qdrant/js-client-rest": "^1.14.1",
+    "better-sqlite3": "^11.10.0",
     "jmespath": "^0.16.0"
   },
   "devDependencies": {
     "@types/jmespath": "^0.15.2",
-    "@types/node": "^22.13.13",
-    "tsx": "^4.19.3",
+    "@types/node": "^22.16.3",
+    "tsx": "^4.20.3",
     "typedoc": "^0.27.9",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.3"
   }
 }
