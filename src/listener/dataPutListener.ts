@@ -31,5 +31,3 @@ export const dataPutListener: ConnectionListener<
   await publishUpdateEvents(value);
   return realizedKey;
 };
-
-

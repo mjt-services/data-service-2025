@@ -34,6 +34,7 @@ export const storeBlob = async ({
   const filePath = getFilePath({ baseDir, hash });
   await fs.mkdir(join(filePath, ".."), { recursive: true });
   const bytes = Buffer.from(await Bytes.toArrayBuffer(data));
+  console.log(`Storing blob at :${filePath} ${bytes.byteLength} bytes`);
   await fs.writeFile(filePath, bytes);
 };
 

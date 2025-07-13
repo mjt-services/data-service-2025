@@ -9,6 +9,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    develop:
+      watch:
+        - path: .
+          action: rebuild
     volumes:
       - ${DATA_DIR}:/data
     deploy:

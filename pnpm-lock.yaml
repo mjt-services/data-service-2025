@@ -19,13 +19,13 @@ importers:
         version: https://codeload.github.com/mjt-engine/cache/tar.gz/1f7dba33f49bce1a232d2c147441579f026512a5
       '@mjt-engine/message':
         specifier: github:mjt-engine/message
-        version: https://codeload.github.com/mjt-engine/message/tar.gz/b5aa178586f8c2798282fb198994d69a349b021e(nats.ws@1.30.1)
+        version: https://codeload.github.com/mjt-engine/message/tar.gz/df604d1c992611693ddea7326116f563ce54e427
       '@mjt-engine/object':
         specifier: github:mjt-engine/object
         version: https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
       '@mjt-services/data-common-2025':
         specifier: github:mjt-services/data-common-2025
-        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/4eca209b306f74f46956f93dda709231ccf9b347(nats.ws@1.30.1)
+        version: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f108f12d16a069888cbb23f4ff5ce4a408386441
       '@qdrant/js-client-rest':
         specifier: ^1.14.1
         version: 1.14.1(typescript@5.8.3)
@@ -229,18 +229,16 @@ packages:
     resolution: {tarball: https://codeload.github.com/mjt-engine/error/tar.gz/9b170db171d86c3a1a0afdc6c7de205259a3b564}
     version: 2025.4.21-1038
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/b5aa178586f8c2798282fb198994d69a349b021e':
-    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/b5aa178586f8c2798282fb198994d69a349b021e}
-    version: 2025.7.11-1610
-    peerDependencies:
-      nats.ws: ^1.27.0
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/df604d1c992611693ddea7326116f563ce54e427':
+    resolution: {tarball: https://codeload.github.com/mjt-engine/message/tar.gz/df604d1c992611693ddea7326116f563ce54e427}
+    version: 2025.7.13-1857
 
   '@mjt-engine/object@https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428':
     resolution: {tarball: https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428}
     version: 2025.5.9-1352
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/4eca209b306f74f46956f93dda709231ccf9b347':
-    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/4eca209b306f74f46956f93dda709231ccf9b347}
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f108f12d16a069888cbb23f4ff5ce4a408386441':
+    resolution: {tarball: https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f108f12d16a069888cbb23f4ff5ce4a408386441}
     version: 2025.3.28-1448
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
@@ -504,8 +502,8 @@ packages:
   napi-build-utils@2.0.0:
     resolution: {integrity: sha512-GEbrYkbfF7MoNaoh2iGG84Mnf/WZfB0GdGEsM8wz7Expx/LlWf5U8t9nvJKXSp3qr5IsEbK04cBGhol/KwOsWA==}
 
-  nats.ws@1.30.1:
-    resolution: {integrity: sha512-OVufQJrYuzt9Gugb4R/kCEM9R03dH2kMZ0Lt59LRL3a0+8bJjxodAxUOh952DiuPTquwGg8JIF8h3BKkTF5mJA==}
+  nats.ws@1.30.3:
+    resolution: {integrity: sha512-aM77V2SEc+B6lbxCMZK3qfRy4jg8pmHj+wZzQKDiDIQYhLPj6U2NSHHBex0syj72Ayzl4uR5Lp3aKXTaVLbRpw==}
 
   nkeys.js@1.1.0:
     resolution: {integrity: sha512-tB/a0shZL5UZWSwsoeyqfTszONTt4k2YS0tuQioMOD180+MbombYVgzDUYHlx+gejYK6rgf08n/2Df99WY0Sxg==}
@@ -726,24 +724,22 @@ snapshots:
     dependencies:
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
 
-  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/b5aa178586f8c2798282fb198994d69a349b021e(nats.ws@1.30.1)':
+  '@mjt-engine/message@https://codeload.github.com/mjt-engine/message/tar.gz/df604d1c992611693ddea7326116f563ce54e427':
     dependencies:
       '@mjt-engine/byte': https://codeload.github.com/mjt-engine/byte/tar.gz/02fcb5bdd8acbb1675c6aa34777955c6d88aa399
       '@mjt-engine/error': https://codeload.github.com/mjt-engine/error/tar.gz/9b170db171d86c3a1a0afdc6c7de205259a3b564
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
-      nats.ws: 1.30.1
+      nats.ws: 1.30.3
 
   '@mjt-engine/object@https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428':
     dependencies:
       '@sinclair/typebox': 0.33.22
       json-stable-stringify: 1.3.0
 
-  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/4eca209b306f74f46956f93dda709231ccf9b347(nats.ws@1.30.1)':
+  '@mjt-services/data-common-2025@https://codeload.github.com/mjt-services/data-common-2025/tar.gz/f108f12d16a069888cbb23f4ff5ce4a408386441':
     dependencies:
-      '@mjt-engine/message': https://codeload.github.com/mjt-engine/message/tar.gz/b5aa178586f8c2798282fb198994d69a349b021e(nats.ws@1.30.1)
+      '@mjt-engine/message': https://codeload.github.com/mjt-engine/message/tar.gz/df604d1c992611693ddea7326116f563ce54e427
       '@mjt-engine/object': https://codeload.github.com/mjt-engine/object/tar.gz/6e096ec8b073cde78d595c55740e44f8812e7428
-    transitivePeerDependencies:
-      - nats.ws
 
   '@msgpackr-extract/msgpackr-extract-darwin-arm64@3.0.3':
     optional: true
@@ -1026,7 +1022,7 @@ snapshots:
 
   napi-build-utils@2.0.0: {}
 
-  nats.ws@1.30.1:
+  nats.ws@1.30.3:
     optionalDependencies:
       nkeys.js: 1.1.0
 
